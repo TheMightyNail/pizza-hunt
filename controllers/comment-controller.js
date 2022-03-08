@@ -1,5 +1,5 @@
-const { Comment, Pizza }=require('../models');
-const { param } = require('../routes');
+const { Comment, Pizza } = require('../models');
+// const { param } = require('../routes');
 
 const commentController = {
     addComment({ params, body }, res) {
