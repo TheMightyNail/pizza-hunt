@@ -9,7 +9,7 @@ request.onupgradeneeded = function(event) {
     const db = event.target.result;
     // create an object store(table) called 'new_pizza', set it to have an autoincrementing primary key
     db.createObjectStore('new_pizza', { autoIncrement: true });
-}
+};  
 
 // upon a successful
 request.onsuccess = function(event) {
