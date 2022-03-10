@@ -17,7 +17,7 @@ request.onsuccess = function(event) {
     db = event.target.result;
 
     // check if app is online, if yes run uploadPizza() function to send all local db data to api
-    if(navigator.online) {
+    if(navigator.onLine) {
         // uploadPizza();
     }
 };
@@ -30,7 +30,7 @@ request.onerror = function(event) {
 // This function will execute if we attempt to submit a new pizza and there's no internet connection
 function saveRecord(record) {
     // open a new transaction with the database with read and write permissions
-    const transaction = db.transaction([ 'new_pizza', 'readwrite' ]);
+    const transaction = db.transaction(['new_pizza'], 'readwrite');
 
     // access the object store for `new_pizza`
     const pizzaObjectStore = transaction.objectStore('new_pizza');
